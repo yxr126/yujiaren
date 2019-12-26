@@ -14,7 +14,7 @@ def generate_data():
     return: standardized x, y and column names
     '''
     # import feature and returns
-    df = pd.read_csv('./data/project_machine.csv')
+    df = pd.read_csv(r'../yujia_data/data/project_machine.csv')
     column_names = list(df)
     
     x = pd.DataFrame()
@@ -26,7 +26,7 @@ def generate_data():
     y = pd.DataFrame()
     
     for stock_id in [10025, 10182, 10259, 10501]:
-        df = pd.read_csv('./data/{}.csv'.format(stock_id))
+        df = pd.read_csv(r'../yujia_data/data/{}.csv'.format(stock_id))
         df = df['RET']
         df = df.to_frame()
         y = y.append(df)
