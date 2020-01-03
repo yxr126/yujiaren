@@ -60,6 +60,21 @@ ranking = rfe.ranking_
 select = rfe.support_
 x_rfe = x[:, select]
 evaluation(x_rfe, y, metric=ols, alpha=0)
+
+# PCA
+from sklearn.decomposition import PCA
+pca = PCA(n_components=10)
+pca.fit(x)
+x_pca = pca.fit_transform(x)
+evaluation(x_pca, y, metric=ols, alpha=0)
+
+# CCA
+from sklearn.cross_decomposition import CCA
+cca = CCA(n_components=1)
+cca.fit(x, y)
+x_cca, y_cca = cca.transform(x, y)
+evaluation(x_cca, y, metric=ols, alpha=0)
+
 #%%
 
 

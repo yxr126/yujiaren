@@ -19,4 +19,5 @@ def plot_pred(y_test, y_pred, title):
     plt.ylabel('Predicted return')
     plt.grid()
     plt.savefig('./plots/{}.svg'.format(title), dpi=400)
-    plt.close()
+    plt.show();
+    
