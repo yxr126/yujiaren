@@ -92,35 +92,35 @@ evaluation(x_cca, y, metric=ols, alpha=0)
 #from keras.layers import Dense, BatchNormalization, Dropout
 #from keras.callbacks import ModelCheckpoint, EarlyStopping
 #np.random.seed(42)
-#def regression_cnn():
-#    model = Sequential()
-#    model.add(Dense(256, activation='relu', input_shape=(139,)))
-#    model.add(BatchNormalization())
-#    model.add(Dense(256, activation = 'relu'))
-#    model.add(BatchNormalization())
-#    model.add(Dense(1, activation = 'linear'))
-#    return model
-#
-#weight_name = r'./yujia.h5'
-#model = regression_cnn()  
-#adam = keras.optimizers.Adam(lr=0.001)
-#model.compile(loss='mean_squared_error', optimizer= adam, metrics=['mean_squared_error'])
-#elstp = EarlyStopping(monitor='val_loss', min_delta=0, patience=1000, verbose=0, mode='min')
-#checkpoint = ModelCheckpoint(weight_name, monitor='val_loss', verbose=0, save_best_only=True, mode='min')
-#callbacks_list = [checkpoint,elstp]
-#history = model.fit(x_train, y_train, epochs=20000, batch_size=len(y_train), validation_split=0.25, callbacks=callbacks_list, verbose=2)
-#history_history = history.history
-#model.load_weights(weight_name)
-#model.compile(loss='mean_squared_error', optimizer= adam, metrics=['mean_squared_error'])
-#y_pred = model.predict(x_test)
-#print('Lasso R2: {}'.format(r2_score(y_test, y_pred)))
-#print('Lasso RMSE: {}'.format(mean_squared_error(y_test, y_pred)**0.5))
-##%%
-#plt.scatter(y_test, y_pred)
-##%%
-#for key in history_history.keys():
-#    plt.plot(history_history[key], label=key)
-#    plt.legend()
+def regression_cnn():
+    model = Sequential()
+    model.add(Dense(256, activation='relu', input_shape=(139,)))
+    model.add(BatchNormalization())
+    model.add(Dense(256, activation = 'relu'))
+    model.add(BatchNormalization())
+    model.add(Dense(1, activation = 'linear'))
+    return model
+
+weight_name = r'./yujia.h5'
+model = regression_cnn()  
+adam = keras.optimizers.Adam(lr=0.001)
+model.compile(loss='mean_squared_error', optimizer= adam, metrics=['mean_squared_error'])
+elstp = EarlyStopping(monitor='val_loss', min_delta=0, patience=1000, verbose=0, mode='min')
+checkpoint = ModelCheckpoint(weight_name, monitor='val_loss', verbose=0, save_best_only=True, mode='min')
+callbacks_list = [checkpoint,elstp]
+history = model.fit(x_train, y_train, epochs=20000, batch_size=len(y_train), validation_split=0.25, callbacks=callbacks_list, verbose=2)
+history_history = history.history
+model.load_weights(weight_name)
+model.compile(loss='mean_squared_error', optimizer= adam, metrics=['mean_squared_error'])
+y_pred = model.predict(x_test)
+print('Lasso R2: {}'.format(r2_score(y_test, y_pred)))
+print('Lasso RMSE: {}'.format(mean_squared_error(y_test, y_pred)**0.5))
+#%%
+plt.scatter(y_test, y_pred)
+#%%
+for key in history_history.keys():
+    plt.plot(history_history[key], label=key)
+    plt.legend()
 
     
 
