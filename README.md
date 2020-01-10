@@ -1,36 +1,11 @@
-# yujiaren
+# Short Bio
 
-One Paragraph of project description goes here
+Yujia Ren is currently a Master student in the Weatherhead School of Management at the Case Western Reserve University. She received his B.S. in Business English at Zhejiang University of Finance and Economics with magna cum laude . She shifted her path towards finance in the U.S.. Her research interests now include big data analysis and machine learning applied to finance.
 
-## Getting Started
+## Contact ME
+* Email: [yxr126@case.edu](mailto:yxr126@case.edu)
+* Phone: (216)-246-8683
+* website: [yujiaren.com](https://sites.google.com/view/yujiaren/home)
 
 
-## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
